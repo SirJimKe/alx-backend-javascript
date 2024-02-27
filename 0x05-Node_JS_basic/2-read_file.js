@@ -21,10 +21,11 @@ function countStudents(path) {
       const count = fieldCounts[field];
       const students = lines.filter(line => line.split(',')[3] === field)
             .map(line => line.split(',')[0]);
-      console.log(`Number of students in ${field}: ${count}. List: ${students.join(', ')}`);
+      console.log(`Number of students in ${field}: \
+${count}. List: ${students.join(', ')}`);
     }
   } catch (error) {
-      throw Error('Cannot load the database');
+    throw Error('Cannot load the database');
   }
 }
 
